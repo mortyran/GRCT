@@ -5,6 +5,6 @@ Genetic correlation: LDSC
 Causative relationship: LCV  
 Pleiotropy loci: COLOC (GWAS to GWAS)  
   
-Author: Mingyu-Ran
-E-mail: ranmingyu@westlake.edu.cn
+Author: Mingyu-Ran  
+E-mail: ranmingyu@westlake.edu.cn  
 Date: October 2, 2023
