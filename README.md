@@ -10,9 +10,9 @@ lung_cancer_GRCh37.gz can be download from [here](https://yanglab.westlake.edu.c
 `docker pull ranmingyu/grct:v1.0`
 
 **Included tools:**  
-Genetic correlation: LDSC  
-Causative relationship: LCV, BiDirectCausal    
-Pleiotropy loci: COLOC (GWAS to GWAS)  
+genetic correlation: `LDSC`  
+causative relationship: `LCV`, `BiDirectCausal`    
+pleiotropy loci: `COLOC` (GWAS to GWAS)  
   
 **Author:** Mingyu-Ran  
 **E-mail:** ranmingyu@westlake.edu.cn  
