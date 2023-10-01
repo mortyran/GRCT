@@ -1,0 +1,101 @@
+---
+title: 'GWAS tutorial: SNP testing (joint approach)'
+author: Patrick Breheny and Tabitha Peter 
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r knitr_setup, include=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+set.seed(1)
+knitr::opts_knit$set(aliases=c(h = 'fig.height', w = 'fig.width'))
+knitr::opts_chunk$set(comment="#", message=FALSE, collapse=TRUE, cache=FALSE, tidy=FALSE, fig.align="center")
+knitr::knit_hooks$set(small.mar = function(before, options, envir) {
+  if (before) par(mar = c(4, 4, .1, .1))
+})
+```
+
+The objective of this module is to test for significant SNPs using a joint approach. For this, we will use the `penalizedLMM` R package, which is available [on GitHub](https://github.com/areisett/penalizedLMM). Once again, we will begin by loading the necessary libraries: 
+
+```{r libs, message=FALSE}
+setwd("C:\\Users\\acer\\Desktop\\westlake-university\\life-science-college\\rotation\\the-first-rotation\\tutorial\\GWAS-demo\\adv-gwas-tutorial-master")
+library(data.table)
+library(magrittr)
+library(qqman)
+library(snpStats)
+library(dplyr)
+
+# devtools::install_github("areisett/penalizedLMM")
+library(penalizedLMM)
+```
+
+Next, we load the data. Start by loading the clinical data, as this has the outcome (coronary artery disease ('CAD')) we need for our models. 
+
+```{r load_clinical_dat}
+clinical <- fread("data/penncath.csv")
+# str(clinical) # if you need to remind yourself of what is here
+```
+
+We also need to load the genetic data. For this section, we will work with the quality controlled (QC'd) data from the `SNPRelate` package (see module 1). We will also need the ".bim" file from the original data for making plots. Finally, we need our design matrix $X$ with no missing values (this is the $X$ we obtained by our imputation procedures). 
+  
+```{r load_SNP_dat}
+# load QC'd data:
+qc_dat <- readRDS('data/gwas-qc.rds')
+# load the bim file
+bim <- fread('data/penncath.bim')
+# load design matrix of SNP data (you would need to complete the imputation module first)
+X <- readRDS(file = "data/fully_imputed_numeric.rds")
+```
+
+
+
+If you completed the population structure module, you should load the principal components as well - we need them for our analysis. If you did not work through the population structure module, you can skip this step.  
+
+```{r load_PC_dat}
+# load principal components 
+PCs <- readRDS(file = "data/PCs_base.rds") %>%
+  as.data.frame()
+
+names(PCs) <- paste0("PC", 1:ncol(PCs))
+
+```
+
+
+# Constructing the model 
+
+For the joint analysis approach, we will consider `hdl` as the outcome. At this time, the functions in `penalizedLMM` are limited to continuous (i.e. numeric) outcomes -- we hope to expand the functionality of this package to generalized modeling in the near future. 
+
+First, we will impute the `r sum(is.na(clinical$hdl))` missing values in `hdl` using the mean. While this may be simplistic, this approach is sufficient for illustrating the joint analysis technique. 
+
+
+```{r hdl}
+clinical$hdl_impute <- ifelse(is.na(clinical$hdl),
+                                  mean(clinical$hdl, na.rm = T),
+                                  clinical$hdl)
+```
+
+
+Now, we will construct a penalized linear mixed model using the MCP penalty (the default in `plmm`). The `k` argument allows us to use a singular value decomposition approach that decreases computational time. For more details, refer to the `penalizedLMM::plmm()` documentation.
+
+```{r plmm}
+joint_model <- plmm(X = X,
+                    y = clinical$hdl_impute,
+                    k = 4)
+
+# by default, our PLMM will evaluate 100 lambda values
+# we can summarize the fit of this model at the 50th lambda value:
+print(summary(joint_model, idx = 50))
+
+```
+
+
+
+# Examining the results 
+
+This section is under development
+
+
+
+
