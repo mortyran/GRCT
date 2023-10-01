@@ -3,7 +3,7 @@ Demo codes for analyzing genetic relationships between complex traits (GRCT) fro
   
 Tools:  
 Genetic correlation: LDSC  
-Causative relationship: LCV  
+Causative relationship: LCV, BiDirectCausal    
 Pleiotropy loci: COLOC (GWAS to GWAS)  
   
 Author: Mingyu-Ran  
