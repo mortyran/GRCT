@@ -11,8 +11,8 @@ lung_cancer_GRCh37.gz can be download from [here](https://yanglab.westlake.edu.c
 
 **Included tools:**  
 genetic correlation: [`LDSC`](https://github.com/bulik/ldsc)  
-causative relationship: `[LCV](https://github.com/lukejoconnor/LCV)`, `[BiDirectCausal](https://github.com/xue-hr/BiDirectCausal)`    
-pleiotropy loci: `[COLOC](https://github.com/chr1swallace/coloc)` (demo code for GWAS to GWAS)  
+causative relationship: [`LCV`](https://github.com/lukejoconnor/LCV), [`BiDirectCausal`](https://github.com/xue-hr/BiDirectCausal)    
+pleiotropy loci: [`COLOC`](https://github.com/chr1swallace/coloc) (demo code for GWAS to GWAS)  
   
 **Author:** Mingyu-Ran  
 **E-mail:** ranmingyu@westlake.edu.cn  
