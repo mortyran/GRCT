@@ -1,0 +1,50 @@
+---
+title: 'GWAS tutorial: An Introduction'
+author: Patrick Breheny, Anna Reisetter, Logan Harris, and Tabitha Peter
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  html_document:
+    toc: false
+---
+
+```{r knitr_setup, include=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+set.seed(1)
+knitr::opts_knit$set(aliases=c(h = 'fig.height', w = 'fig.width'))
+knitr::opts_chunk$set(comment="#", message=FALSE, collapse=TRUE, cache=FALSE, tidy=FALSE, fig.align="center")
+knitr::knit_hooks$set(small.mar = function(before, options, envir) {
+  if (before) par(mar = c(4, 4, .1, .1))
+})
+```
+
+# Welcome!
+
+This tutorial is a continuing work in progress, but we are excited you are using this resource to get started with Genome Wide Association Studies.
+
+This tutorial was inspired by similar work in [Reed2015](https://dx.doi.org/10.1002/sim.6605) and [Marees2017](https://onlinelibrary.wiley.com/doi/abs/10.1002/mpr.1608). Unfortunately, the software used in the 2015 tutorial is a bit out of date now -- several R packages have changed or are no longer available -- and it needed an update.
+
+This tutorial is broken down into four sections: 1) Data formats, summary statistics and quality control, 2) Imputation and population structure, 3) SNP Testing, and 4) Post analysis and biological relevance.
+
+## [Data Formats, Summary Statistics, and QC](quality_control.html)
+
+This section covers the basics from different file types to initial things to look for in the data and how to exclude certain parts of the data that would muddy our end results.
+
+## [Imputation](imputation.html)
+
+Imputation describes the process of handling missing data by replacing missing values with a logical method. Some methods for analyzing SNP data (in particular, any regression methods) cannot handle missing values, so the issue of missing data must be addresseed prior to analysis. 
+
+## [Population Structure](population_structure.html)
+
+Population structure helps us take into account possible confounding factors (such as familial relationships) that may exist in our data set. If we do not adjust for them explicitly, such confounding factors could incorrectly inflate results and make our inferences biased.
+
+## [Analyzing association]
+
+As the name would imply, analyzing associations between SNPs and phenotypes is the primary purpose of a GWAS. We divide this material up into two sections, one which considers each SNP in isolation and the other which considers all SNPs jointly:
+
+- [Marginal](marginal_analysis.html)
+- [Joint / simultaneous](joint_analysis.html)
+
+## [Post Analysis](post_gwas.html)
+
+Finally, we attempt to take the results and turn them into something clinically meaningful. For instance, I could tell you some SNP, but it will have no mean to you unless you have spent time studying it. On the other hand, if I tell you that a variant of a SNP is associated with improper functioning of chloride channels, that will have a great deal more significance. 
