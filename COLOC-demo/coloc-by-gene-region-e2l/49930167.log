@@ -1,0 +1,125 @@
+INFO:    Converting SIF file to temporary sandbox...
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+This is coloc version 5.2.3
+[1] "Reading data......"
+[1] "Allocating files......"
+[[1]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[2]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[3]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[4]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[5]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[6]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[7]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[8]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[9]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[10]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[11]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[12]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[13]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[14]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[15]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[16]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[17]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[18]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[19]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[[20]]
+ [1] "coloc"      "dplyr"      "data.table" "snow"       "stats"     
+ [6] "graphics"   "grDevices"  "utils"      "datasets"   "methods"   
+[11] "base"      
+
+[1] "Calculating......"
+[1] "Outputing results......"
+INFO:    Cleaning up image...
