@@ -2,9 +2,9 @@
 GRCT mainly includes demo codes for analyzing genetic relationships between complex traits (GRCT) from GWAS summary data as well as some knowledge in genomics filed.  
 
 Data download:  
-asthma_GRCh37.gz can be download form [here](https://yanglab.westlake.edu.cn/data/fastgwa_data/UKBbin/495_PheCode.v1.0.fastGWA.gz).  
-ever_smoked_GRCh37.gz can be download form [here](https://yanglab.westlake.edu.cn/data/fastgwa_data/UKBbin/20160.v1.0.fastGWA.gz).  
-lung_cancer_GRCh37.gz can be download form [here](https://yanglab.westlake.edu.cn/data/fastgwa_data/UKBbin/165.1_PheCode.v1.0.fastGWA.gz).  
+asthma_GRCh37.gz can be download from [here](https://yanglab.westlake.edu.cn/data/fastgwa_data/UKBbin/495_PheCode.v1.0.fastGWA.gz).  
+ever_smoked_GRCh37.gz can be download from [here](https://yanglab.westlake.edu.cn/data/fastgwa_data/UKBbin/20160.v1.0.fastGWA.gz).  
+lung_cancer_GRCh37.gz can be download from [here](https://yanglab.westlake.edu.cn/data/fastgwa_data/UKBbin/165.1_PheCode.v1.0.fastGWA.gz).  
 
 Tools:  
 Genetic correlation: LDSC  
