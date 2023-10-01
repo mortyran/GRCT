@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--ref-ld-chr /data/eur_w_ld_chr/ \
+--out /data/genetic_correlation_e2l \
+--rg /data/ever_smoke_gss_ldsc_input.sumstats.gz,/data/lung_cancer_gss_ldsc_input.sumstats.gz \
+--w-ld-chr /data/eur_w_ld_chr/ 
+
+Beginning analysis at Sun Oct  1 12:28:02 2023
+Reading summary statistics from /data/ever_smoke_gss_ldsc_input.sumstats.gz ...
+Read summary statistics for 1185327 SNPs.
+Reading reference panel LD Score from /data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1290028 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1290028 SNPs.
+After merging with reference panel LD, 1162688 SNPs remain.
+After merging with regression SNP LD, 1162688 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from /data/lung_cancer_gss_ldsc_input.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 1162688 SNPs remain.
+1162685 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0743 (0.0029)
+Lambda GC: 1.5035
+Mean Chi^2: 1.6727
+Intercept: 1.0135 (0.0104)
+Ratio: 0.0201 (0.0154)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0027 (0.0009)
+Lambda GC: 1.0165
+Mean Chi^2: 1.0198
+Intercept: 0.9956 (0.0063)
+Ratio < 0 (usually indicates GC correction).
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0061 (0.0011)
+Mean z1*z2: 0.0929
+Intercept: 0.0355 (0.0052)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.4276 (0.0987)
+Z-score: 4.3316
+P: 1.4804e-05
+
+
+Summary of Genetic Correlation Results
+p1                                            p2      rg      se       z           p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+/data/ever_smoke_gss_ldsc_input.sumstats.gz  /data/lung_cancer_gss_ldsc_input.sumstats.gz  0.4276  0.0987  4.3316  1.4804e-05  0.0027     0.0009  0.9956     0.0063    0.0355       0.0052
+
+Analysis finished at Sun Oct  1 12:28:24 2023
+Total time elapsed: 21.94s
