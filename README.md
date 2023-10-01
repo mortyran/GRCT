@@ -1,5 +1,5 @@
 # GRCT
-Demo codes for analyzing genetic relationships between complex traits (GRCT) from GWAS summary data.  
+GRCT mainly includes demo codes for analyzing genetic relationships between complex traits (GRCT) from GWAS summary data as well as some knowledge in genomics filed.  
   
 Tools:  
 Genetic correlation: LDSC  
