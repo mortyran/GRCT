@@ -8,14 +8,13 @@ lung_cancer_GRCh37.gz can be download from [here](https://yanglab.westlake.edu.c
 
 # Docker image
 `grct:v1.0` can be pulled as following command:  
-`docker pull ranmingyu/grct:v1.0`
-
-# Included tools 
+`docker pull ranmingyu/grct:v1.0`  
+**included tools**  
 genetic correlation: [`LDSC`](https://github.com/bulik/ldsc)  
 causative relationship: [`LCV`](https://github.com/lukejoconnor/LCV), [`BiDirectCausal`](https://github.com/xue-hr/BiDirectCausal)    
 pleiotropy loci: [`COLOC`](https://github.com/chr1swallace/coloc) (demo code for GWAS to GWAS)  
 
-# contact
+# Contact
 **Author:** Mingyu-Ran  
 **E-mail:** ranmingyu@westlake.edu.cn  
 **Date:** October 2, 2023
